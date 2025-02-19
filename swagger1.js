@@ -136,6 +136,8 @@ const options = {
                     }
                 }
             },
+            ['/addNewStudent']: 
+            
         },
         schemes: ['http'], // Define the protocol (HTTP or HTTPS)
     },
