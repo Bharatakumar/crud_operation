@@ -5,7 +5,7 @@ const server = express();
 server.use(express.json());
 const { swaggerDocs }= require("./swagger1.js");
 const swaggerUi= require ("swagger-ui-express");
-
+ 
 
 server.get('/', function(req, res){
     res.send('Welcome to the server');
@@ -26,7 +26,7 @@ server.post('/addNewStudent', async (req, res) => {
 })
 
 
-server.get('/getStudent:name', async function (req, res) {
+server.get('/getStudent/:name', async function (req, res) {
     try {
         const name = req.params.name;
         const data= await mydata.find({name: name});
